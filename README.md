@@ -1,7 +1,3 @@
-Here's a sample README file for your Courier Tracking System project:
-
----
-
 # Courier Tracking System
 
 ## Introduction
