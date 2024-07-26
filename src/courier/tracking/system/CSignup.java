@@ -197,28 +197,28 @@ userLogin.setVisible(true);
         String password=jPasswordField1.getText();
         Statement stm = con.createStatement();
 
-// Check if the email already exists in the database
+
 String checkEmailQuery = "SELECT * FROM USER WHERE email='" + email + "'";
 ResultSet checkEmailResult = stm.executeQuery(checkEmailQuery);
 
 if (checkEmailResult.next()) {
-    // Email already exists, display a message
+  
     JOptionPane.showMessageDialog(this, "Email already exists. Please use a different email.");
     jTextField1.setText("");
     jPasswordField1.setText("");
 } else {
-    // Email is unique, proceed with signup
+    
     String signupQuery = "INSERT INTO USER (email, password) VALUES ('" + email + "', '" + password + "')";
     int rowsAffected = stm.executeUpdate(signupQuery);
 
     if (rowsAffected > 0) {
-        // Signup successful
+     
         JOptionPane.showMessageDialog(this, "ACCOUNT CREATED SUCCESSFULLY!!.");
         dispose();
            CLogin userLogin = new CLogin();
             userLogin.setVisible(true);
     } else {
-        // Signup failed, display an error message
+       
         JOptionPane.showMessageDialog(this, "Signup failed. Please try again.");
         jTextField1.setText("");
         jPasswordField1.setText("");
