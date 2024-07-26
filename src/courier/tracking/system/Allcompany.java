@@ -33,15 +33,15 @@ public class Allcompany extends JFrame {
         DefaultTableModel model = new DefaultTableModel(columns, 0);
 
         companyTable = new JTable(model);
-        companyTable.setFont(new Font("Arial", Font.PLAIN, 20)); // Set font size for table
-        companyTable.setRowHeight(40); // Set row height
+        companyTable.setFont(new Font("Arial", Font.PLAIN, 20)); 
+        companyTable.setRowHeight(40); 
         companyTable.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
         JScrollPane scrollPane = new JScrollPane(companyTable);
-        scrollPane.setBorder(new EmptyBorder(10, 10, 10, 10)); // Add padding
+        scrollPane.setBorder(new EmptyBorder(10, 10, 10, 10)); 
         add(scrollPane, BorderLayout.CENTER);
 
         JTableHeader header = companyTable.getTableHeader();
-        header.setFont(new Font("Arial", Font.BOLD, 30)); // Set font size for header
+        header.setFont(new Font("Arial", Font.BOLD, 30));
 
         addButton = new JButton("Add");
         updateButton = new JButton("Update");
@@ -50,14 +50,14 @@ public class Allcompany extends JFrame {
         addButton.setFont(buttonFont);
         updateButton.setFont(buttonFont);
         deleteButton.setFont(buttonFont);
-        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 10)); // Center align and add spacing between buttons
-        buttonPanel.setBorder(new EmptyBorder(10, 10, 10, 10)); // Add padding
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 10)); 
+        buttonPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
         buttonPanel.add(addButton);
         buttonPanel.add(updateButton);
         buttonPanel.add(deleteButton);
         add(buttonPanel, BorderLayout.SOUTH);
 
-        pack(); // Pack components to preferred sizes
+        pack();
         setVisible(true);
 
         displayCompanies();
@@ -110,11 +110,11 @@ void displayCompanies() {
             }
         }
 
-        // Disable cell selection after data is loaded
+        
         companyTable.clearSelection();
         companyTable.setFocusable(false);
         
-        // Make the table non-editable
+     
         companyTable.setDefaultEditor(Object.class, null);
         
     } catch (SQLException e) {
@@ -144,7 +144,7 @@ void displayCompanies() {
                 }
 
                 JOptionPane.showMessageDialog(this, "Company deleted successfully.", "Success", JOptionPane.INFORMATION_MESSAGE);
-                displayCompanies(); // Refresh the table after deletion
+                displayCompanies(); 
             } catch (SQLException e) {
                 JOptionPane.showMessageDialog(this, "Error deleting company: " + e.getMessage(), "Delete Error", JOptionPane.ERROR_MESSAGE);
             }
