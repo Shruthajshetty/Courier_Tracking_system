@@ -72,7 +72,7 @@ public class AdminLogin extends javax.swing.JFrame {
         }
     }
 private void openAdminHomePage() {
-    // Create and display the home page for admin
+   
     java.awt.EventQueue.invokeLater(() -> {
         new HomeAdminPage().setVisible(true);
     });
