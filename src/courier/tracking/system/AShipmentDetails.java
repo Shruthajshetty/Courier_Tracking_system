@@ -45,7 +45,6 @@ public class AShipmentDetails extends JFrame {
         Font labelFont = new Font("Arial", Font.BOLD, 30);
         shipmentIdLabel.setFont(labelFont);
         shipmentIdField.setFont(labelFont);
-//        searchButton.setSize(140, 120);
         JPanel inputPanel = new JPanel();
          searchButton.setFont(labelFont);
         inputPanel.add(shipmentIdLabel);
@@ -94,7 +93,7 @@ public class AShipmentDetails extends JFrame {
                                     JLabel companyNameLabel = new JLabel("Company Name: " + resultSet.getString("CompanyName"));
                                     JLabel deliveryStatusLabel = new JLabel("Delivery Status: " + deliveryStatus);
                                     JLabel shipmentDateLabel = new JLabel("Shipment Date: " + shipmentDate);
-                                  //  JLabel expectedDateLabel = new JLabel("Expected Date: " + expectedDate);
+                                 
 
                                     Font labelFont = new Font("Arial", Font.BOLD, 20);
                                     shipmentTypeLabel.setFont(labelFont);
@@ -105,7 +104,7 @@ public class AShipmentDetails extends JFrame {
                                     companyNameLabel.setFont(labelFont);
                                     deliveryStatusLabel.setFont(labelFont);
                                     shipmentDateLabel.setFont(labelFont);
-                                  //  expectedDateLabel.setFont(labelFont);
+                                 
 
                                     resultPanel.add(shipmentTypeLabel);
                                     resultPanel.add(weightLabel);
@@ -114,7 +113,7 @@ public class AShipmentDetails extends JFrame {
                                     resultPanel.add(companyNameLabel);
                                     resultPanel.add(deliveryStatusLabel);
                                     resultPanel.add(shipmentDateLabel);
-                                   // resultPanel.add(expectedDateLabel);
+                                  
 
                                     resultPanel.revalidate();
                                     resultPanel.repaint();
