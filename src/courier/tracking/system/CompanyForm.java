@@ -108,7 +108,7 @@ public class CompanyForm extends JFrame {
 
             JOptionPane.showMessageDialog(this, title + " successful.", "Success", JOptionPane.INFORMATION_MESSAGE);
             dispose();
-           parent.displayCompanies(); // Refresh the table after adding/updating
+           parent.displayCompanies();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
