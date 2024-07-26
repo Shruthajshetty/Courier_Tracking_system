@@ -104,7 +104,7 @@ public class CommonHomeFrame extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
  private void openLoginPage(String role) {
-        // Depending on the role, open the respective login page
+        
         if ("admin".equals(role)) {
             ALogin adminLogin = new ALogin();
             adminLogin.setVisible(true);
@@ -113,18 +113,14 @@ public class CommonHomeFrame extends javax.swing.JFrame {
             userLogin.setVisible(true);
         }
 
-        // Close the current home page
+       
         this.dispose();
     }
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+       
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -143,7 +139,7 @@ public class CommonHomeFrame extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
+       
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new CommonHomeFrame().setVisible(true);
