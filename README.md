@@ -55,7 +55,7 @@ The Courier Tracking System is a comprehensive software solution designed to str
 5. **Clone the Repository**:
    - Clone the project repository to your local machine using the following command:
      ```bash
-     git clone https://github.com/shruthajshetty/Courier_Tracking-System.git
+     git clone https://github.com/skaje27/Courier_Tracking_system.git
      ```
 
 6. **Open the Project in NetBeans**:
